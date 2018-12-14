@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--************UILoading ***********-->
+    <style name="UI.TipDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="ui_tip_dialog_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">120dp</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:background">@drawable/bg_c0_15</item>
+    </style>
+
+    <!--************UILoading ***********-->
+    <declare-styleable name="UILoadingView">
+        <attr name="ui_loading_view_size" format="dimension"/>
+        <attr name="android:color"/>
+    </declare-styleable>
+    <attr name="UILoadingStyle" format="reference"/>
+
+    <!--************ UITopBar ***********-->
+
+    <declare-styleable name="UITopBar">
+        <attr name="ui_topbar_title_gravity" format="enum">
+            <enum name="left_center" value="19"/>
+            <enum name="center" value="17"/>
+        </attr>
+        <attr name="ui_topbar_need_separator" format="boolean"/>
+        <attr name="ui_topbar_separator_color" format="color"/>
+        <attr name="ui_topbar_separator_height" format="dimension"/>
+        <attr name="ui_topbar_bg_color" format="color"/>
+        <attr name="ui_topbar_left_back_drawable_id" format="reference"/>
+        <attr name="ui_topbar_title_text_size" format="dimension"/>
+        <attr name="ui_topbar_title_text_size_with_subtitle" format="dimension"/>
+        <attr name="ui_topbar_subtitle_text_size" format="dimension"/>
+        <attr name="ui_topbar_title_color" format="color"/>
+        <attr name="ui_topbar_subtitle_color" format="color"/>
+        <attr name="ui_topbar_title_margin_horizontal_when_no_btn_aside" format="dimension"/>
+        <attr name="ui_topbar_title_container_padding_horizontal" format="dimension"/>
+        <attr name="ui_topbar_image_btn_width" format="dimension"/>
+        <attr name="ui_topbar_image_btn_height" format="dimension"/>
+        <attr name="ui_topbar_text_btn_padding_horizontal" format="dimension"/>
+        <attr name="ui_topbar_text_btn_color_state_list" format="reference"/>
+        <attr name="ui_topbar_text_btn_text_size" format="dimension"/>
+    </declare-styleable>
+    <attr name="ui_config_color_gray_1" format="color"/>
+    <attr name="ui_config_color_gray_4" format="color"/>
+    <attr name="ui_topbar_height" format="dimension"/>
+    <attr name="ui_config_color_separator" format="color"/>
+    <attr name="UITopBarStyle" format="reference"/>
+    <!--************ UICollapsingTextHelper ***********-->
+    <declare-styleable name="UITextAppearance">
+        <attr name="android:textSize"/>
+        <attr name="android:textColor"/>
+        <attr name="android:textColorHint"/>
+        <attr name="android:textStyle"/>
+        <attr name="android:typeface"/>
+        <attr name="textAllCaps"/>
+        <attr name="android:shadowColor"/>
+        <attr name="android:shadowDy"/>
+        <attr name="android:shadowDx"/>
+        <attr name="android:shadowRadius"/>
+    </declare-styleable>
+
+    <!-- UICollapsingTopBarLayout start -->
+    <declare-styleable name="UICollapsingTopBarLayout">
+        <attr name="ui_expandedTitleMargin" format="dimension"/>
+        <attr name="ui_expandedTitleMarginStart" format="dimension"/>
+        <attr name="ui_expandedTitleMarginTop" format="dimension"/>
+        <attr name="ui_expandedTitleMarginEnd" format="dimension"/>
+        <attr name="ui_expandedTitleMarginBottom" format="dimension"/>
+        <attr name="ui_expandedTitleTextAppearance" format="reference"/>
+        <attr name="ui_collapsedTitleTextAppearance" format="reference"/>
+        <attr name="ui_contentScrim" format="color"/>
+        <attr name="ui_statusBarScrim" format="color"/>
+        <attr name="ui_topBarId" format="reference"/>
+        <attr name="ui_scrimVisibleHeightTrigger" format="dimension"/>
+        <attr name="ui_scrimAnimationDuration" format="integer"/>
+        <attr name="ui_collapsedTitleGravity">
+            <flag name="top" value="0x30"/>
+            <flag name="bottom" value="0x50"/>
+            <flag name="left" value="0x03"/>
+            <flag name="right" value="0x05"/>
+            <flag name="center_vertical" value="0x10"/>
+            <flag name="fill_vertical" value="0x70"/>
+            <flag name="center_horizontal" value="0x01"/>
+            <flag name="center" value="0x11"/>
+            <flag name="start" value="0x00800003"/>
+            <flag name="end" value="0x00800005"/>
+        </attr>
+        <attr name="ui_expandedTitleGravity">
+            <flag name="top" value="0x30"/>
+            <flag name="bottom" value="0x50"/>
+            <flag name="left" value="0x03"/>
+            <flag name="right" value="0x05"/>
+            <flag name="center_vertical" value="0x10"/>
+            <flag name="fill_vertical" value="0x70"/>
+            <flag name="center_horizontal" value="0x01"/>
+            <flag name="center" value="0x11"/>
+            <flag name="start" value="0x00800003"/>
+            <flag name="end" value="0x00800005"/>
+        </attr>
+        <attr name="ui_titleEnabled" format="boolean"/>
+        <attr name="ui_title" format="string"/>
+    </declare-styleable>
+
+    <style name="CollapsingTopBarLayoutExpanded">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="CollapsingTopBarLayoutCollapsed">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <declare-styleable name="UICollapsingTopBarLayout_Layout">
+        <attr name="ui_layout_collapseMode">
+            <enum name="none" value="0"/>
+            <enum name="pin" value="1"/>
+            <enum name="parallax" value="2"/>
+        </attr>
+        <attr name="ui_layout_collapseParallaxMultiplier" format="float"/>
+    </declare-styleable>
+
+    <!--圆角ImageView-->
+    <declare-styleable name="RoundCornerImageView">
+        <attr name="roundImageView_hasRound" format="boolean" />
+        <attr name="roundImageView_roundColor" format="color" />
+        <attr name="leftTop_angle" format="boolean" />
+        <attr name="leftBottom_angle" format="boolean" />
+        <attr name="rightTop_angle" format="boolean" />
+        <attr name="rightBottom_angle" format="boolean" />
+        <attr name="corner_radius" format="dimension" />
+    </declare-styleable>
+</resources>

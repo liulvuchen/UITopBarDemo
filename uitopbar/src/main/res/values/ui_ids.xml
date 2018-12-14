@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ui_topbar_item_left_back" type="id"/>
+    <item name="ui_view_offset_helper" type="id"/>
+    <!--返回-->
+    <item name="ui_top_bar_back" type="id"/>
+</resources>
