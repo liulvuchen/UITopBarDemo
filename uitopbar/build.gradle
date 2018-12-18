@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 28
@@ -24,6 +25,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    lintOptions {
+        abortOnError false
+    }
+
 }
 
 dependencies {
@@ -35,41 +40,13 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
 }
 
-//ext {
-//    bintrayRepo = 'maven'
-//    bintrayName = 'ui'
-//
-//    publishedGroupId = 'com.heizi.uitopbar'
-//    libraryName = 'ui'
-//    artifact = 'uitopbar'
-//
-//    libraryDescription = '沉浸式头部、MD样式底部'
-//
-//    siteUrl = 'https://github.com/liulvuchen/UITopBarDemo'
-//    gitUrl = 'https://github.com/liulvuchen/UITopBarDemo.git'
-//
-//    libraryVersion = '1.0.0'
-//
-//    developerId = 'david'
-//    developerName = 'liulvuchen'
-//    developerEmail = '2867058917@qq.com'
-//
-//    licenseName = 'The Apache Software License, Version 2.0'
-//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-//    allLicenses = ["Apache-2.0"]
-//}
-//
-//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
-//添加,这个需要修改成你的项目信息，切记！！！！
-
-//publish {
-//    repoName = 'ui'
-//    userOrg = 'heizi'//bintray.com 注册的用户名
-//    groupId = 'com.uilibrary' //jcenter上的路径
-//    artifactId = 'ui'//项目名称
-//    publishVersion = '1.0.0'//版本号
-//    desc = '沉浸式头部、MD样式底部'//描述，不重要
-//    //网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
-//    website = 'https://github.com/liulvuchen/UITopBarDemo'
-//}
+publish {
+    repoName = 'ui'
+    userOrg = 'heizi'//bintray.com 注册的用户名
+    groupId = 'com.heizi.ui' //jcenter上的路径
+    artifactId = 'ui'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = '沉浸式头部、MD样式底部'//描述，不重要
+    //网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+    website = 'https://github.com/liulvuchen/UITopBarDemo'
+}
